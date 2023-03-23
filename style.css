@@ -1,0 +1,54 @@
+:root {
+    --font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+label {
+    font-family: var(--font);
+}
+
+.title {
+    font-size: 30pt;
+    margin-left: 15px;
+}
+
+.subtitle {
+    font-size: 20pt;
+    margin-left: 15px;
+}
+
+form {
+    margin: 15px;
+}
+
+input, textarea {
+    font-family: var(--font);
+    font-size: 15pt;
+    margin-top: 30px;
+    width: 700px;
+}
+
+textarea {
+    height: 300px;
+}
+
+.confirmDetail {
+    margin: 15px;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.detailHeader {
+    font-weight: 700;
+}
+
+.detailBody {
+    margin-bottom: 20px;
+    margin-left: 15px;
+    font-style: italic;
+}
+
+input[type="submit"] {
+    background-color: green;
+    color: white;
+}
