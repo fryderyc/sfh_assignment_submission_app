@@ -1,3 +1,12 @@
+<?php
+
+session_start();
+$name = $_SESSION["name"];
+$email = $_SESSION["email"];
+$github = $_SESSION["github"];
+$description = $_SESSION["description"];
+
+?>
 <html>
 
 <head>
@@ -7,22 +16,16 @@
 <body>
 
     <?php
-    session_start();
-    $name = $_SESSION["name"];
-    $email = $_SESSION["email"];
-    $github = $_SESSION["github"];
-    $description = $_SESSION["description"];
-
     try {
         error_log("Connecting to DB\n", 0);
         $dbhost = 'localhost';
-        $dbname = 'skillsforhire';
+        $dbname = 'id20523530_fredtest';
         $dbuser = 'root';
         $dbpass = '';
         $pdo = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbuser, $dbpass);
 
 
-        $sql = "INSERT INTO `assignment` (`name`, `email`, `description`, `github_link`) VALUES (?, ?, ?, ?)";
+        $sql = "INSERT INTO `assignment2` (`name`, `email`, `description`, `github_link`) VALUES (?, ?, ?, ?)";
         $stmt = $pdo->prepare($sql);
 
         $pdo->beginTransaction();
