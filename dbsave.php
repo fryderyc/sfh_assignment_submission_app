@@ -20,7 +20,7 @@ $description = $_SESSION["description"];
         error_log("Connecting to DB\n", 0);
         $dbhost = 'localhost';
         $dbname = 'id20523530_fredtest';
-        $dbuser = 'root';
+        $dbuser = '';
         $dbpass = '';
         $pdo = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbuser, $dbpass);
 
@@ -51,7 +51,8 @@ $description = $_SESSION["description"];
         <?php
     }
     ?>
-
+    
+    <button onclick="history.go(-3)">Go Back</button>
 
 </body>
 
